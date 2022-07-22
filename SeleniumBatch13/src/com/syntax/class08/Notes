@@ -1,0 +1,14 @@
+Selenium Class 8
+
+Implicit wait:
+will be applied for findElement() methods
+
+Explicit Wait or WebDriver Wait:
+is used to tell the webdriver to wait for a certain condition
+before throwing an exception for a specified condition
+
+Explicit wait works with ExpectedConditions class and waits until
+a certain condition is met or the given time is achieved
+
+* sign in xpath is a wild card which can Identify any tagname
+//*[@name = 'websubmit']

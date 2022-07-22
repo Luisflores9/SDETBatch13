@@ -1,0 +1,52 @@
+Why do we need Xpath and CSS selector?
+Developers may not provide all the locators in html
+By using Xpath and CSS we can identify elements with any
+given attributes
+
+What is an Xpath?
+Xpath is like a query language which helps us to identify elements
+uniquely on the web page
+
+Types of Xpath?
+2 Types:
+Absolute Xpath --> It starts from the starting note of the HTML
+                   It always starts with a single slash (/)
+                   e.g /html/body/div/div/div
+Relative Xpath --> It will start from any node in html
+                   It always starts with double slash(//)
+
+Syntax For Relative Xpath:
+//tagname[@attribute = 'attribute value']
+e.g //input[@id = 'email']
+
+Identifying elements by its text:
+//tagname[text() = 'text value']
+e.g //a[text() = 'Create new account']
+e.g //h2[text()='Connect with friends and the world around you on Facebook.']
+
+
+identifying elements by using contains method:
+//tagname[contains(@attribute, 'partial attribute value')]
+e.g.
+//input[contains(@placeholder,'Email')]
+e.g.
+//h2[contains(text(), 'the world')]
+
+starts-with will identify elements by its partial starting value
+//tagname[starts-with(@attribute,'partial starting attribute value')]
+e.g //input[starts-with(@aria-label,'Email')]
+
+ends with was used in Xpath 1.0 and we are using 2.0 and this method is not available
+
+Advanced Xpath:
+Based on parent and child and siblings relationships
+
+Identifying element by following sibling
+//tagname[@attribute = 'attribute value']/following-sibling :: siblingTagname
+e.g //input[@id = 'calFromDate']/following-sibling :: imp
+
+identifying element by preceding sibling
+//tagname[@attribute = 'attribute value']/preceding-sibling :: siblingTagname
+e.g //span[text() = '& Orders']/preceding-sibling :: span
+
+identifying elements by its parent
